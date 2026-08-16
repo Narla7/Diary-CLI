@@ -7,7 +7,7 @@ A very simple command-line diary application written in Python. Fast and Lightwe
 - Write diary entries
 - Read diary entries
 - Stores entries as `.txt` files
-- Entries can only be saved as the date they were entered in.
+- Entries can only be saved as the date they were entered in
 
 ## Usage
 
