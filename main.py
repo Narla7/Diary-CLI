@@ -14,9 +14,12 @@ def write():
 def read():
 
     which = input("Enter the date of the entry:")
-    with open(which + ".txt", "r") as file:
-        a = file.read()
-        print (a)
+    try:
+        with open(which + ".txt", "r") as file:
+            a = file.read()
+            print (a)
+    except FileNotFoundError:
+        print("Looks like there is not Diary Entry for that date!")
 
 
 if ask == "write" or ask == "w":
