@@ -3,28 +3,30 @@ print ("welcome to the CLI-Diary application!")
 
 ask = input("what  do you want to do? (read/write) :")
 
-def write():
+# defining functions
 
-    date = input("enter the date for the diary entry (dd.mm.yy) :") # edit this line if you want another format
-    file = open (date + ".txt", "w")
-    file.write(date + "\n")
-    n = input("enter your entry for today:")
-    file.write(n)
-    file.close()
+def write():
+    date = input("enter todays date (dd.mm.yy):")
+    with open(date + ".txt", "w") as file:
+        entry = input("enter your entry for today: \n")
+	file.write(entry)
 
 def read():
 
-    which = input("Enter the date of the entry")
-    file = open(which + ".txt", "r")
-    contents = file.read()
-    print (contents)
-    file.close()
+    which = input("Enter the date of the entry:")
+    with open(which + ".txt", "r") as file:
+        a = file.read()
+	print (a)
+
+
+# flow of control 
 
 if ask == "write" or ask == "w":
     write()
 
 elif ask == "read" or ask == "r":
     read()
+
 else:
     print ("please enter a valid option")
 
